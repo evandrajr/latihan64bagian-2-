@@ -1,0 +1,28 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+unsigned long long faktorial(int n) {
+    if (n < 0) {
+        cout << "Faktorial tidak didefinisikan untuk bilangan negatif." << endl;
+        return 0;
+    }
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * faktorial(n - 1);
+    }
+}
+
+int main() {
+    int n;
+    cout << "Masukkan Nilai Faktorial yang dicari: ";
+    cin >> n;
+    if (n < 0) {
+        cout << "Faktorial tidak didefinisikan untuk bilangan negatif." << endl;
+    } else {
+        cout << "Faktorial dari " << n << " = " << faktorial(n) << endl;
+    }
+    system("PAUSE");
+    return 0;
+}
